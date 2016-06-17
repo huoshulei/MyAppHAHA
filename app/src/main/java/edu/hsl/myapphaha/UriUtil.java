@@ -1,6 +1,7 @@
 package edu.hsl.myapphaha;
 
 import android.net.Uri;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -16,8 +17,9 @@ import java.util.Date;
  * Created by Administrator on 2016/5/29.
  */
 public class UriUtil {
-    final String uriString = "http://japi.juhe.cn/joke/content/list.from?";
-    final String APPKEY    = "35dff966e248deb39d23cc9988d55ffc";
+    final                String uriString = "http://japi.juhe.cn/joke/content/list.from?";
+    final                String APPKEY    = "35dff966e248deb39d23cc9988d55ffc";
+    private static final String TAG       = "UriUtil";
 
     public UriUtil() {
     }
@@ -34,6 +36,7 @@ public class UriUtil {
                     .appendQueryParameter("time", unixtime)
                     .appendQueryParameter("key", APPKEY)
                     .build().toString();
+            Log.d(TAG, "getJson: " + uri);
             URL               url           = new URL(uri);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");

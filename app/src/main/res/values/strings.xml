@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">一个笑话</string>
     <string name="text_name">\u3000\u3000</string>
+
+
+    <string name="hello_blank_fragment">这是个什么鬼</string>
 </resources>

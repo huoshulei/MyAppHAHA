@@ -31,14 +31,16 @@ public class MyAdapter extends BaseAdapter {
         return data.get(i);
     }
 
-    public void addData(List<JsonBean.Result.Data> data) {
-        this.data.addAll(data);
-    }
-
     @Override
     public long getItemId(int i) {
         return i;
     }
+
+
+    public void addData(List<JsonBean.Result.Data> data) {
+        this.data.addAll(data);
+    }
+
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
